@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.image as img
 import cv2
 
-import numpy as np
+
 
 def autocrop(image, threshold=0):
     """Crops any edges below or equal to threshold
@@ -23,7 +23,7 @@ def autocrop(image, threshold=0):
     rows = np.where(np.max(flatImage, 0) > threshold)[0]
     if rows.size:
         cols = np.where(np.max(flatImage, 1) > threshold)[0]
-        image = image[cols[0]: cols[-1] + 1, rows[0]: rows[-1] + 1]
+        image = image[:, rows[0]: rows[-1] + 1]
     else:
         image = image[:1, :1]
 
