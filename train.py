@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
 import pandas as pd
-import ImageFilter
 
 
 
@@ -57,7 +56,7 @@ plt.show()
 plt.savefig('ig.png')
 
 #APPENDING
-df = pd.DataFrame(x)
+df = pd.DataFrame({input_x:x})
 #df1=np.array([input_x])
 
 df=df.transpose()

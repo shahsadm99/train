@@ -8,11 +8,8 @@ import cv2
 
 def autocrop(image, threshold=0):
     """Crops any edges below or equal to threshold
-
     Crops blank image to 1x1.
-
     Returns cropped image.
-
     """
     if len(image.shape) == 3:
         flatImage = np.max(image, 2)
